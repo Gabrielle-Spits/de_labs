@@ -35,9 +35,9 @@
           </e>
         </e>
         <e p="scipts" t="Include">
+          <e p="Enemy.cs" t="Include" />
           <e p="MoveDown.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
-          <e p="SpawnManager.cs" t="Include" />
         </e>
       </e>
       <e p="Gabrielle-personal-project.sln" t="IncludeFlat" />

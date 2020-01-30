@@ -6,8 +6,8 @@ using UnityEngine.Experimental.PlayerLoop;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 5.0f;
-    private float zBound = 6 ;
+    private float speed = 4.0f;
+    private float zBound = 10 ;
     private Rigidbody playerRB;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     {
         float Horizontalinput = Input.GetAxis("Horizontal");
         float VerticalInput = Input.GetAxis("Vertical");
-        Debug.Log(VerticalInput);
         transform.Translate(speed * Horizontalinput * Time.deltaTime,0,speed * VerticalInput * Time.deltaTime);
         
     }
@@ -50,7 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("player has collided with enemy");
+            Destroy(gameObject);
         }
     }
 
